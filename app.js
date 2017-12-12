@@ -17,7 +17,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
 // default value for title local
-app.locals.title = 'Express - Generated with IronGenerator';
+app.locals.title = 'Typify';
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -27,8 +27,21 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+
+// ============Routers===================================
+
 const index = require('./routes/index');
 app.use('/', index);
+
+
+const userApi = require('./routes/user-api-router');
+app.use('/api', userApi);
+
+/* ---------------------------------------------------- */
+
+
+
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
