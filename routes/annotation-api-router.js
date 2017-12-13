@@ -8,7 +8,6 @@ const router = express.Router();
 
 
 
-
 router.get("/annotations", (req, res, next) => {
 	Annotation
 					.find()
