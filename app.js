@@ -35,8 +35,8 @@ const index = require('./routes/index');
 app.use('/', index);
 
 
-const userApi = require('./routes/user-api-router');
-app.use('/api', userApi);
+// const userApi = require('./routes/user-api-router');
+// app.use('/api', userApi);
 
 /* ---------------------------------------------------- */
 

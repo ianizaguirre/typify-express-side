@@ -3,25 +3,41 @@ require("dotenv").config();
 
 require("../config/mongoose-setup");
 
-const Phone = require("../models/user-model");
+const Annotation = require("../models/annotation-model");
 
 
 
+const annotationList = [
 
-const userList = [
 	{
-		fullName: 'Morpheus',
-		username: 'Red Pill'
+		name: 'Morpheus',
+		content: [
+		'Unibrow Design',
+		'Unlocks with Your Face',
+		'Tons of Screen Space'
+		],
+		dateAdded: new Date()
 	},
+
+
 	{
-		fullName: 'Thomas A. Anderson',
-		username: 'Neo'
+		name: 'Thomas A. Anderson',
+		content: [
+		'Plastic Design',
+		'Domino Design',
+		'Ads For Days'
+		],
+		dateAdded: new Date()
 	}
+
 ];
 
-Phone.create(userList)
+
+
+
+Annotation.create(annotationList)
 	.then((results) => {
-		console.log(` ${results.length} user created `);
+		console.log(` ${results.length} annotation created `);
 	})
 	.catch((err) => {
 		console.log('Save ERROR!');
