@@ -35,8 +35,11 @@ const index = require('./routes/index');
 app.use('/', index);
 
 
-const annotationApi = require('./routes/annotation-api-router');
-app.use('/api', annotationApi);
+const articleApi = require('./routes/article-api-router');
+app.use('/api', articleApi);
+
+// const annotationApi = require('./routes/annotation-api-router');
+// app.use('/api', annotationApi);
 
 // const userApi = require('./routes/user-api-router');
 // app.use('/api', userApi);

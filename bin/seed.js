@@ -13,7 +13,7 @@ const articleList = [
 	{
 		title: 'Title of Article1',
 
-		content: 
+		lines: 
 		[
 
 		'As hardware technology has advanced, so too has the need for sophisticated software applications to run not just on one kind of device but on an array of devices.',
