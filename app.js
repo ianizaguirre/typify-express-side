@@ -5,6 +5,7 @@ const favicon      = require('serve-favicon');
 const logger       = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser   = require('body-parser');
+const cors         = require('cors');
 
 require("dotenv").config();
 
@@ -19,6 +20,10 @@ app.set('view engine', 'jade');
 // default value for title local
 app.locals.title = 'Typify';
 
+
+
+// ============Middleware===================================
+
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
@@ -26,6 +31,16 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(
+  cors({
+    // accept cookies across domains
+    credentials: true,
+    // ONLY allow these domains to connect
+    origin: [ 'http://localhost:4200' ]
+  })
+);
+
 
 
 
@@ -41,8 +56,8 @@ app.use('/api', articleApi);
 // const annotationApi = require('./routes/annotation-api-router');
 // app.use('/api', annotationApi);
 
-// const userApi = require('./routes/user-api-router');
-// app.use('/api', userApi);
+const userApi = require('./routes/user-api-router');
+app.use('/api', userApi);
 
 /* ---------------------------------------------------- */
 
