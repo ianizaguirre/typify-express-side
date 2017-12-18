@@ -67,6 +67,10 @@ app.use('/api', userApi);
 
 
 
-
+// ============Dir contents for Heroku upload================
+app.use((req, res, next) => {
+        res.sendFile(__dirname + '/public/index.html' );
+    });
+/* ---------------------------------------------------- */
 
 module.exports = app;
