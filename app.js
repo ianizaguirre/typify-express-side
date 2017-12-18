@@ -6,6 +6,9 @@ const cookieParser = require('cookie-parser');
 const bodyParser   = require('body-parser');
 const cors         = require('cors');
 
+const session = require('express-session');
+const passport = require('passport');
+
 require("dotenv").config();
 
 
@@ -37,6 +40,15 @@ app.use(
   })
 );
 
+app.use(
+	session({
+		resave: true,
+		saveUninitialized: true,
+		secret: 'this should proably go in the .env file'
+	})
+);
+app.use( passport.initialize() );
+app.use( passport.session() );
 
 
 
