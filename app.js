@@ -8,10 +8,13 @@ const cors         = require('cors');
 
 require("dotenv").config();
 
+
+
+
 require("./config/mongoose-setup");
+require("./config/passport-setup"); 
 
 const app = express();
-
 
 
 
