@@ -1,0 +1,34 @@
+.flex-container {
+	display: flex;
+}
+
+
+/* ====================== */
+
+.flex-grid-half {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-grid-half .col {
+	width: 50%;
+}
+
+
+.light-grey-wrap {
+	background-color: #F5FBFC;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+
+/* ====================== */
+
+.flex-grid-thirds {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-grid-thirds .col {
+  width: 32%;
+}
+
+/* ====================== */

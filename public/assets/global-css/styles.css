@@ -1,0 +1,181 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+::selection {
+    background-color: #b2d7fe;
+}
+
+
+html {
+	font-size: 1.125em; /*Set to 18px not 16px for default browser font*/
+	box-sizing: border-box;
+}
+body {
+	width: 100%;
+	margin: 0 auto;
+}
+
+
+
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "tablet-gothic-condensed", sans-serif;
+	font-weight: 700;
+	margin: 0;
+	color: #000;
+}
+body, p {
+	font-family: "acumin-pro", sans-serif;
+	font-weight: 400;
+
+	color: #222;
+}
+
+a {
+	text-decoration: none;
+	color: #7d8fe8;
+	transition: all .3s;
+}
+a:hover {
+	color: #a8b4f0;
+}
+
+
+
+/* ========
+===> Containers
+=========== */
+
+.contain-1 {
+	width: 90%;
+	margin: 0 auto;
+}
+
+
+
+
+/* ========
+===> Hero Intro | home page
+=========== */
+
+.hero-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.17em;
+  margin-top: 3.16em;
+}
+
+h1.hero-intro {
+	font-size: 3rem;
+	font-weight: 400;
+}
+
+/*p.hero-intro-text{
+
+}*/
+
+
+
+.hero-line:after {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/* ========
+===> Bottom Footer blocks | home page
+=========== */
+
+.block-wrapper { 
+	padding: 3.1em 0 3.1em 0; /*57px*/
+}
+
+
+h1.block-title {
+	font-size: 2.8rem;  /*52px*/
+}
+p.block-intro {
+
+}
+
+/* ========
+===> Articles block | home page
+=========== */
+
+
+.bordered-wrap {
+	border: 5px solid #000;
+	width: 100%;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+
+p.articles-intro {
+
+}
+
+
+
+/* ========
+===> Headers
+=========== */
+
+h3 {
+	font-size: 1.57rem; /*28px*/
+	margin-top: 3.16em  ; /*57px*/
+	margin-bottom: 1.17em ; /*21px*/
+}
+
+
+
+.header-line {
+	font-size: 2.5rem; /*45px*/
+	margin-bottom: 35px;
+	display: inline-block;
+	position: relative;
+}
+.header-line:after {
+	content: '';
+	width: 120px; /*120px*/
+	height: 10px; /*10px*/
+	background: #40FFDC;
+	display: block;
+	position: relative;
+	margin-top: 30px;
+}
+
+
+
+/* ========
+===> Footer
+=========== */
+
+footer {
+	background-color: var(--primary-color);
+	padding: 10px;
+}
+
+
+
+
+.temp-SPACE-section {
+	padding-top: 4em;
+	padding-bottom: 5em;
+}
+
+.temp-SPACE-section-below-articles {
+	padding-top: 7em;
+	padding-bottom: 6em;
+}
+
+
+.temp-SPACE-footer-end {
+	padding-top: 4em;
+	padding-bottom: 4em;
+}
+
+
