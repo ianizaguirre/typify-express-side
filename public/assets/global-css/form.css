@@ -1,0 +1,92 @@
+.login-form-wrapper {
+	max-width: 555px;
+	margin: 0 auto;
+}
+
+h1.login-heading {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+/* ========
+===> Login Form
+=========== */
+
+.login-form {
+
+}
+
+.login-form label {
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	margin: 0 0 2px;
+	line-height: 1.3;
+	text-align: left;
+
+	font-weight: 700;
+	font-size: 16px;
+}
+
+.input-container {
+	margin-top: 8px;
+}
+
+.login-form input {
+	display: inline-block;
+  width: 100%;
+  height: 60px;
+  background: #fff;
+  line-height: 60px;
+  padding: 0 20px;
+  font-size: 24px;
+
+  border-radius: 0;
+  border: 2px solid #36edff;
+  color: #000;
+  transition: all .2s linear;
+}
+
+.login-form input:focus {
+	background: rgba(54,237,255,.07);
+	border: 2px solid #36edff;
+	outline: none;
+	box-shadow: 0 0 4px #36edff;
+}
+
+/* ========
+===> Login Form BUTTON
+=========== */
+.login-btn-wrapper {
+	padding: 16px 0 10px;
+	margin: 16px 0 0;
+	width: 100%;
+
+	display: flex;
+	justify-content: flex-end;
+}
+
+.login-btn {
+	color: #fff;
+	background: #13ce66;
+
+	font-size: 16px;
+	font-weight: 700;
+
+
+	width: auto;
+	line-height: 50px;
+	height: 60px;
+	padding: 0 40px;
+	margin: 0!important;
+	text-transform: none;
+	-webkit-appearance: none;
+	cursor: pointer;
+	border-radius: 0;
+	border: 2px solid #13ce66;
+	transition: all .2s linear;
+}
+
+.login-btn:hover {
+	background: #fff;
+	color: #13ce66;
+}

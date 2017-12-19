@@ -24,13 +24,13 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: "tablet-gothic-condensed", sans-serif;
 	font-weight: 700;
 	margin: 0;
-	color: #000;
+	color: #3c4858;
 }
 body, p {
 	font-family: "acumin-pro", sans-serif;
 	font-weight: 400;
 
-	color: #222;
+	color: #3c4858;
 }
 
 a {
@@ -159,6 +159,18 @@ footer {
 	padding: 10px;
 }
 
+.hello-user-footer {
+  width: 90%;
+  margin: 0 auto;
+  text-align: left;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 2px;
+}
+.footer-username {
+	font-weight: 400;
+	text-transform: lowercase;
+	color: rgba(255,255,255,0.7);
+}
 
 
 
@@ -174,8 +186,8 @@ footer {
 
 
 .temp-SPACE-footer-end {
-	padding-top: 4em;
-	padding-bottom: 4em;
+	padding-top: 6em;
+	padding-bottom: 6em;
 }
 
 

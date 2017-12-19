@@ -123,5 +123,34 @@ bottom: 3px;*/
 }
 
 
+/* ========
+===> Nav Logout Button
+=========== */
+
+.signout {
+  color: #fff;
+  background: #FF3C00;
+  font-size: 1rem;
+  padding: 11px 28px;
+  transition: all .3s;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.signout:hover {
+  background-color: #000;
+}
+
+
+.join {
+  font-weight: 600;
+  transition: all .3s;
+}
+
+
+
+
+
+
+
 
 
