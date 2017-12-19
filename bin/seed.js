@@ -33,7 +33,7 @@ const articleList = [
 		],
 
 
-		image: 'http://wesbos.com/wp-content/uploads/2016/09/var-dead.png'
+		image: 'https://blog.marvelapp.com/wp-content/uploads/2017/08/UX.png'
 	},
 
 
@@ -92,7 +92,7 @@ const articleList = [
 		],
 
 
-		image: 'https://techonria.files.wordpress.com/2016/07/arrow.png?w=785'
+		image: 'https://blog.marvelapp.com/wp-content/uploads/2017/11/2-1.png'
 	}
 
 

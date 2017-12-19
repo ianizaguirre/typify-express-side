@@ -33,6 +33,34 @@ router.get("/articles", (req, res, next) => {
 
 
 
+router.get("/articles/:id", (req, res, next) => {
+
+
+	Article.findById(req.params.id)
+		.then((articleFromDb) => {
+
+			// 404 if article does not exist on a postman delete
+			if (articleFromDb === null) {
+				// respond with an ERROR MESSAGE in the Json format
+				res.status(404).json({ error: "Article not found" });
+			}
+
+			// respond with the QUERY RESULTS in the JSON format
+			res.status(200).json(articleFromDb);
+		})
+		.catch((err) => {
+			console.log('GET /articles/:id ERROR! ');
+			console.log(err);
+
+			// respond with an Error Message in the JSON format
+			res.status(500).json({ error: "Article details database error" });
+		});
+}); // GET /articles/:id
+
+
+
+
+
 
 
 
