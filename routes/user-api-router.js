@@ -68,41 +68,41 @@ router.post('/signup', (req, res, next) => {
 
  // POST /api/login
 
-// router.post('/login', (req,res, next) => {
-// 	User.findOne({ username: req.body.username })
-// 		.then((userFromDb) => {
-// 			if (userFromDb === null) {
-// 				res.status(400).json({ error: 'Username is invalid' });
-// 				return;
-// 			}
-// 			const isPasswordGood =
-// 				bcrypt.compareSync(req.body.password, userFromDb.encryptedPassword);
+router.post('/login', (req,res, next) => {
+	User.findOne({ username: req.body.username })
+		.then((userFromDb) => {
+			if (userFromDb === null) {
+				res.status(400).json({ error: 'Username is invalid' });
+				return;
+			}
+			const isPasswordGood =
+				bcrypt.compareSync(req.body.password, userFromDb.encryptedPassword);
 
-// 				if (isPasswordGood === false) {
-// 					res.status(400).json({ error: 'Password is invalid' });
-// 					return;
-// 				}
+				if (isPasswordGood === false) {
+					res.status(400).json({ error: 'Password is invalid' });
+					return;
+				}
 
-// 				req.login(userFromDb, (err) => {
-// 					// clear the "encryptedPassword" before sending the user info
-// 					// ( otherwise its a security risk )
-// 					userFromDb.encryptedPassword = undefined;
+				req.login(userFromDb, (err) => {
+					// clear the "encryptedPassword" before sending the user info
+					// ( otherwise its a security risk )
+					userFromDb.encryptedPassword = undefined;
 				
-// 						res.status(200).json({
-// 						isLoggedIn: true,	
-// 						userInfo:	userFromDb
-// 						});
-// 				}); // req.login
-// 		})
+						res.status(200).json({
+						isLoggedIn: true,	
+						userInfo:	userFromDb
+						});
+				}); // req.login
+		})
 
-// 		.catch((err) => {
-// 			console.log('POST /login ERROR!');
-// 			console.log(err);
+		.catch((err) => {
+			console.log('POST /login ERROR!');
+			console.log(err);
 
-// 			res.status(500).json({ error: 'Log in database error' });
-// 		});
+			res.status(500).json({ error: 'Log in database error' });
+		});
 
-// }); // POST /login
+}); // POST /login
 
 
 
@@ -112,14 +112,14 @@ router.post('/signup', (req, res, next) => {
 // DELETE /api/logout
 
 
-// router.delete('/logout', (req, res, next) => {
-// 	req.logout();
+router.delete('/logout', (req, res, next) => {
+	req.logout();
 
-// 	res.status(200).json({
-// 		isLoggedIn: false,
-// 		userInfo: null
-// 	});
-// });
+	res.status(200).json({
+		isLoggedIn: false,
+		userInfo: null
+	});
+});
 
 
 
@@ -127,24 +127,24 @@ router.post('/signup', (req, res, next) => {
 
 // // Check If User Is Logged In
 
-// router.get('/checklogin', (req, res, next) => {
-// 	if (req.user) {
-// 		// clear the "encryptedPassword" before sending the user info
-// 		// (otherwise it is a security risk)
-// 		req.user.encryptedPassword = undefined;
+router.get('/checklogin', (req, res, next) => {
+	if (req.user) {
+		// clear the "encryptedPassword" before sending the user info
+		// (otherwise it is a security risk)
+		req.user.encryptedPassword = undefined;
 
-// 		res.status(200).json({
-// 			isLoggedIn: true,
-// 			userInfo: req.user
-// 		});
-// 	}
-// 	else {
-// 		res.status(200).json({
-// 			isLoggedIn: false,
-// 			userInfo: null
-// 		});
-// 	}
-// }); // GET /  Check Log In
+		res.status(200).json({
+			isLoggedIn: true,
+			userInfo: req.user
+		});
+	}
+	else {
+		res.status(200).json({
+			isLoggedIn: false,
+			userInfo: null
+		});
+	}
+}); // GET /  Check Log In
 
 
 
