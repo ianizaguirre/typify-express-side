@@ -17,6 +17,10 @@ const articleSchema = new Schema (
 			// required: [true, 'Name is required']
 		},
 
+		intro: {
+			type: String
+		},
+
 		// Article Content that will be parsed 
 		lines: [ 
 							 { type: String }
