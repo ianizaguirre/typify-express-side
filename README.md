@@ -41,7 +41,7 @@ To view this application live ( hosted on a ".co" domain ) , please click the fo
 &nbsp;
 
 
-### View the AngularJS repository ( Front-end ) 
+### View the AngularJS repository ( Front-End ) 
 
 * [View AngularJS Repository](https://github.com/ianizaguirre/typify-angular-side)
 
